@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.75, 10.875" name="NcpManagerDb">
+  <DataContextMoniker Name="/NcpManagerDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="21f5be32-a375-4be1-a7c4-93ff6e812bb1" absoluteBounds="11.75, 2.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/ValoreCampoEsitoEsame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a256d01c-8399-448a-be21-bdbf79fbdaab" absoluteBounds="11.765, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c48209e4-a65a-4a87-99f7-f0c33bc910df" absoluteBounds="11.75, 6.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Appuntamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0eda493f-7d34-42a0-93ac-94e4f92a577a" absoluteBounds="11.765, 6.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea982ed7-4582-44aa-8f05-fb2ab47c0846" absoluteBounds="14.5, 2.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Appuntamento_Esame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0138552a-96d8-4ba4-8695-924065727d1b" absoluteBounds="14.515, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="59ae187d-4e02-4ace-95b4-57c52746e97f" absoluteBounds="9, 2.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/CampoEsitoEsame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="172e1827-e9d5-43da-a67c-261fdc5f29c2" absoluteBounds="9.015, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5e098110-b176-495b-9769-6bbc0392ff22" absoluteBounds="6.25, 2.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Esame" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81e5a9bd-5671-425c-8570-d5114d7f4eda" absoluteBounds="6.265, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0ea2c5fb-9821-4d5a-88c6-de4b78f134af" absoluteBounds="6.25, 6.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/MedicoGenerico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fc51c092-f628-4010-96d9-090cb94b0489" absoluteBounds="6.265, 6.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cf35deb-7b1e-4cab-87a6-d8dfd7a67e17" absoluteBounds="3.5, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/MedicoSpecialista" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e517fc4-8242-4f24-b98e-58196c7d1a93" absoluteBounds="3.515, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71ff6e13-8504-434b-b922-0e7c36f80827" absoluteBounds="0.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Password" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18b21830-0f7b-4186-9a67-9c1c8a5ae328" absoluteBounds="0.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42936740-3f01-44a0-88ec-e0c07d0584c6" absoluteBounds="9, 5.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Paziente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7acd545d-94f6-4d50-8b67-cdf2171693d9" absoluteBounds="9.015, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5c406e2-3a10-4599-81eb-221a23de1e3b" absoluteBounds="11.75, 9.25, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Paziente_Sindrome" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a67225ae-5df4-4f67-b672-fdfadb1578ef" absoluteBounds="11.765, 9.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5247084a-da59-4809-8303-2e43b8fe4e17" absoluteBounds="9, 9.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Sindrome" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32abc8c4-79cd-44f8-afbf-705052654fce" absoluteBounds="9.015, 9.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="245de00b-68eb-4d8c-97ee-08f6f989f441" absoluteBounds="0.75, 2.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/NcpManagerDbDataContext/Specializzazione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="998fc40f-e46f-42ef-8f96-1e57ee48e8dd" absoluteBounds="0.765, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.75 : 7.01044840494792); (15.5 : 7.01044840494792); (15.5 : 3.89589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Appuntamento/Appuntamento_Appuntamento_Esame" />
+      <nodes>
+        <classShapeMoniker Id="c48209e4-a65a-4a87-99f7-f0c33bc910df" />
+        <classShapeMoniker Id="ea982ed7-4582-44aa-8f05-fb2ab47c0846" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.75 : 2.94314697265625); (14.5 : 2.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/ValoreCampoEsitoEsame/ValoreCampoEsitoEsame_Appuntamento_Esame" />
+      <nodes>
+        <classShapeMoniker Id="21f5be32-a375-4be1-a7c4-93ff6e812bb1" />
+        <classShapeMoniker Id="ea982ed7-4582-44aa-8f05-fb2ab47c0846" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 2.94314697265625); (11.75 : 2.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/CampoEsitoEsame/CampoEsitoEsame_ValoreCampoEsitoEsame" />
+      <nodes>
+        <classShapeMoniker Id="59ae187d-4e02-4ace-95b4-57c52746e97f" />
+        <classShapeMoniker Id="21f5be32-a375-4be1-a7c4-93ff6e812bb1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 3.6362939453125); (11.375 : 4.0112939453125); (11.375 : 4.27089680989583); (14.125 : 4.27089680989583); (14.5 : 3.89589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/CampoEsitoEsame/CampoEsitoEsame_Appuntamento_Esame" />
+      <nodes>
+        <classShapeMoniker Id="59ae187d-4e02-4ace-95b4-57c52746e97f" />
+        <classShapeMoniker Id="ea982ed7-4582-44aa-8f05-fb2ab47c0846" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.25); (8.625 : 1.875); (8.625 : 1.75); (14.125 : 1.75); (14.5 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Esame/Esame_Appuntamento_Esame" />
+      <nodes>
+        <classShapeMoniker Id="5e098110-b176-495b-9769-6bbc0392ff22" />
+        <classShapeMoniker Id="ea982ed7-4582-44aa-8f05-fb2ab47c0846" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 2.97439947265625); (9 : 2.97439947265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Esame/Esame_CampoEsitoEsame" />
+      <nodes>
+        <classShapeMoniker Id="5e098110-b176-495b-9769-6bbc0392ff22" />
+        <classShapeMoniker Id="59ae187d-4e02-4ace-95b4-57c52746e97f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.94314697265625); (6.25 : 2.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/MedicoSpecialista/MedicoSpecialista_Esame" />
+      <nodes>
+        <classShapeMoniker Id="1cf35deb-7b1e-4cab-87a6-d8dfd7a67e17" />
+        <classShapeMoniker Id="5e098110-b176-495b-9769-6bbc0392ff22" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 7.01044840494792); (11.75 : 7.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Paziente/Paziente_Appuntamento" />
+      <nodes>
+        <classShapeMoniker Id="42936740-3f01-44a0-88ec-e0c07d0584c6" />
+        <classShapeMoniker Id="c48209e4-a65a-4a87-99f7-f0c33bc910df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.94314697265625); (9 : 6.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/MedicoGenerico/MedicoGenerico_Paziente" />
+      <nodes>
+        <classShapeMoniker Id="0ea2c5fb-9821-4d5a-88c6-de4b78f134af" />
+        <classShapeMoniker Id="42936740-3f01-44a0-88ec-e0c07d0584c6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 8.2901025390625); (11.375 : 8.6651025390625); (11.375 : 9.94314697265625); (11.75 : 9.94314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Paziente/Paziente_Paziente_Sindrome" />
+      <nodes>
+        <classShapeMoniker Id="42936740-3f01-44a0-88ec-e0c07d0584c6" />
+        <classShapeMoniker Id="b5c406e2-3a10-4599-81eb-221a23de1e3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 10.3185697428385); (11.75 : 10.3185697428385)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Sindrome/Sindrome_Paziente_Sindrome" />
+      <nodes>
+        <classShapeMoniker Id="5247084a-da59-4809-8303-2e43b8fe4e17" />
+        <classShapeMoniker Id="b5c406e2-3a10-4599-81eb-221a23de1e3b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.97199625651042); (3.5 : 2.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NcpManagerDbDataContext/Specializzazione/Specializzazione_MedicoSpecialista" />
+      <nodes>
+        <classShapeMoniker Id="245de00b-68eb-4d8c-97ee-08f6f989f441" />
+        <classShapeMoniker Id="1cf35deb-7b1e-4cab-87a6-d8dfd7a67e17" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NcpManagerDb" Class="NcpManagerDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MS-STG-CLT1-14;Initial Catalog=NcpManagerDb;User ID=sa" SettingsObjectName="NcpManagerApplication.Properties.Settings" SettingsPropertyName="NcpManagerDbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ValoreCampoEsitoEsame" Member="ValoreCampoEsitoEsames">
+    <Type Name="ValoreCampoEsitoEsame">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Valore" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IdEsito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ValoreCampoEsitoEsame_Appuntamento_Esame" Member="Appuntamento_Esames" ThisKey="Id" OtherKey="IdValore" Type="Appuntamento_Esame" />
+      <Association Name="CampoEsitoEsame_ValoreCampoEsitoEsame" Member="CampoEsitoEsame" ThisKey="IdEsito" OtherKey="Id" Type="CampoEsitoEsame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Appuntamento" Member="Appuntamentos">
+    <Type Name="Appuntamento">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Ora" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="Chiuso" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IdPaziente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Appuntamento_Appuntamento_Esame" Member="Appuntamento_Esames" ThisKey="Id" OtherKey="IdAppuntamento" Type="Appuntamento_Esame" />
+      <Association Name="Paziente_Appuntamento" Member="Paziente" ThisKey="IdPaziente" OtherKey="Id" Type="Paziente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Appuntamento_Esame" Member="Appuntamento_Esames">
+    <Type Name="Appuntamento_Esame">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdAppuntamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEsame" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdEsito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdValore" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Appuntamento_Appuntamento_Esame" Member="Appuntamento" ThisKey="IdAppuntamento" OtherKey="Id" Type="Appuntamento" IsForeignKey="true" />
+      <Association Name="ValoreCampoEsitoEsame_Appuntamento_Esame" Member="ValoreCampoEsitoEsame" ThisKey="IdValore" OtherKey="Id" Type="ValoreCampoEsitoEsame" IsForeignKey="true" />
+      <Association Name="CampoEsitoEsame_Appuntamento_Esame" Member="CampoEsitoEsame" ThisKey="IdEsito" OtherKey="Id" Type="CampoEsitoEsame" IsForeignKey="true" />
+      <Association Name="Esame_Appuntamento_Esame" Member="Esame" ThisKey="IdEsame" OtherKey="Id" Type="Esame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CampoEsitoEsame" Member="CampoEsitoEsames">
+    <Type Name="CampoEsitoEsame">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IdEsame" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CampoEsitoEsame_ValoreCampoEsitoEsame" Member="ValoreCampoEsitoEsames" ThisKey="Id" OtherKey="IdEsito" Type="ValoreCampoEsitoEsame" />
+      <Association Name="CampoEsitoEsame_Appuntamento_Esame" Member="Appuntamento_Esames" ThisKey="Id" OtherKey="IdEsito" Type="Appuntamento_Esame" />
+      <Association Name="Esame_CampoEsitoEsame" Member="Esame" ThisKey="IdEsame" OtherKey="Id" Type="Esame" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Esame" Member="Esames">
+    <Type Name="Esame">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IdMedicoSpecialista" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Esame_Appuntamento_Esame" Member="Appuntamento_Esames" ThisKey="Id" OtherKey="IdEsame" Type="Appuntamento_Esame" />
+      <Association Name="Esame_CampoEsitoEsame" Member="CampoEsitoEsames" ThisKey="Id" OtherKey="IdEsame" Type="CampoEsitoEsame" />
+      <Association Name="MedicoSpecialista_Esame" Member="MedicoSpecialista" ThisKey="IdMedicoSpecialista" OtherKey="Id" Type="MedicoSpecialista" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicoGenerico" Member="MedicoGenericos">
+    <Type Name="MedicoGenerico">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cognome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="MedicoGenerico_Paziente" Member="Pazientes" ThisKey="Id" OtherKey="IdMedicoCurante" Type="Paziente" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MedicoSpecialista" Member="MedicoSpecialistas">
+    <Type Name="MedicoSpecialista">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cognome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IdSpecializzazione" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MedicoSpecialista_Esame" Member="Esames" ThisKey="Id" OtherKey="IdMedicoSpecialista" Type="Esame" />
+      <Association Name="Specializzazione_MedicoSpecialista" Member="Specializzazione" ThisKey="IdSpecializzazione" OtherKey="Id" Type="Specializzazione" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Password" Member="Passwords">
+    <Type Name="Password">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PasswordAttuale" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paziente" Member="Pazientes">
+    <Type Name="Paziente">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Cognome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DataNascita" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sesso" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CodiceFiscale" Type="System.String" DbType="NChar(16)" CanBeNull="true" />
+      <Column Name="TelefonoCellulare" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TelefonoFisso" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="IdMedicoCurante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Paziente_Appuntamento" Member="Appuntamentos" ThisKey="Id" OtherKey="IdPaziente" Type="Appuntamento" />
+      <Association Name="Paziente_Paziente_Sindrome" Member="Paziente_Sindromes" ThisKey="Id" OtherKey="IdPaziente" Type="Paziente_Sindrome" />
+      <Association Name="MedicoGenerico_Paziente" Member="MedicoGenerico" ThisKey="IdMedicoCurante" OtherKey="Id" Type="MedicoGenerico" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paziente_Sindrome" Member="Paziente_Sindromes">
+    <Type Name="Paziente_Sindrome">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdPaziente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdSindrome" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Paziente_Paziente_Sindrome" Member="Paziente" ThisKey="IdPaziente" OtherKey="Id" Type="Paziente" IsForeignKey="true" />
+      <Association Name="Sindrome_Paziente_Sindrome" Member="Sindrome" ThisKey="IdSindrome" OtherKey="Id" Type="Sindrome" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sindrome" Member="Sindromes">
+    <Type Name="Sindrome">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Sindrome_Paziente_Sindrome" Member="Paziente_Sindromes" ThisKey="Id" OtherKey="IdSindrome" Type="Paziente_Sindrome" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Specializzazione" Member="Specializzaziones">
+    <Type Name="Specializzazione">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Specializzazione_MedicoSpecialista" Member="MedicoSpecialistas" ThisKey="Id" OtherKey="IdSpecializzazione" Type="MedicoSpecialista" />
+    </Type>
+  </Table>
+</Database>
